@@ -1,0 +1,52 @@
+# AI-RTFM Documentation System
+
+> IT Operations documentation using PRISM KERNEL methodology. Contains runbooks, incident reports, architecture decisions, and knowledge base articles for technical teams.
+
+## Runbooks
+
+- [Production Deployment - Order Service](runbooks/deploy-to-production.md): Step-by-step procedure for deploying order-service to production Kubernetes cluster with Helm, including database migrations and rollback procedures.
+
+## Incidents
+
+- [2026-04-15 Database Outage](incidents/2024-10-15-database-outage.md): P1 incident postmortem - PostgreSQL primary failure due to disk space exhaustion, 142 minutes downtime, root cause analysis and action items.
+
+## Architecture Decisions
+
+- [ADR-0001: Use PostgreSQL](adr/0001-use-postgresql.md): Decision to use PostgreSQL over MongoDB and CockroachDB for order management system. Covers ACID requirements, team expertise, and cost analysis.
+
+## Knowledge Base
+
+- [VPN Error 809/628 Troubleshooting](kb/vpn-connection-troubleshooting.md): End-user guide for fixing Windows VPN connection errors. Covers router configuration, registry fixes, and protocol switching.
+
+## Standards
+
+- [Documentation Guide](standards/documentation-guide.md): Documentation standards and requirements for all technical documents.
+- [Style Guide](standards/style-guide.md): Writing style conventions for technical documentation.
+- [Review Process](standards/review-process.md): Document review workflow and approval process.
+- [Tag Taxonomy](standards/tag-taxonomy.md): Controlled vocabulary for document tagging.
+
+## Templates
+
+- [Technical Documentation Template](templates/techdoc-template.md): Template for runbooks and procedures.
+- [Incident Report Template](templates/incident-template.md): Template for incident postmortems.
+- [ADR Template](templates/adr-template.md): Template for architecture decision records.
+- [Knowledge Base Template](templates/kb-template.md): Template for support articles.
+- [API Documentation Template](templates/api-template.md): Template for API documentation.
+- [Change Request Template](templates/change-template.md): Template for change requests.
+- [Onboarding Template](templates/onboard-template.md): Template for new hire onboarding guides.
+- [Security Advisory Template](templates/security-template.md): Template for security advisories and vulnerability communications.
+- [Compliance Template](templates/compliance-template.md): Template for audit compliance documentation.
+- [Infrastructure as Code Template](templates/iac-template.md): Template for IaC module documentation.
+- [Disaster Recovery Template](templates/dr-template.md): Template for disaster recovery plans.
+- [Concept/Explanation Template](templates/concept-template.md): Template for background concepts and system explanations.
+
+## PRISM Kernels
+
+- [IT Operations Kernels](kernels/it-ops-kernels.md): AI prompt library with 12 kernels for generating documentation (techdoc, incident, adr, kb, change, onboard, api, security, compliance, iac, dr, concept).
+
+## Training
+
+- [Quick Reference Card](QUICK-REFERENCE.md): One-page reference for common tasks and workflows.
+- [Onboarding Guide](ONBOARDING.md): Step-by-step onboarding for new team members (1-2 hours).
+- [Demo Script](DEMO.md): 15-minute demonstration script for team presentations.
+- [Workshop Guide](WORKSHOP.md): 2-hour hands-on workshop for documentation training.
