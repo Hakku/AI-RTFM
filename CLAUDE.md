@@ -29,9 +29,13 @@ Do not conflate these. Project management tracks development work. The documenta
 
 ### Completed Work
 - Language: English (system files converted)
-- Kernels: Simplified to plain English format (12 kernels)
+- Kernels: Simplified to plain English format (12 kernels, incl. #concept)
+- Templates: All 12 kernels have matching templates
 - Path references: Fixed (no more `docs/` prefix)
 - Discoverability: llms.txt, tag taxonomy, search/stale tools
+- Review cycles: Standardized to 30 days for active docs
+- Example docs: Dates current (2026)
+- Git: Pushed to https://github.com/Hakku/AI-RTFM
 
 ## File Quick Reference
 
@@ -65,8 +69,18 @@ Do not conflate these. Project management tracks development work. The documenta
 
 Before deleting any file, copy to `.backup/filename.YYYYMMDD`
 
-## Skills
+## Repository
 
-| Skill | Purpose |
-|-------|---------|
-| `/quick-handoff` | Update context.md and memory.md before ending |
+- **Remote:** https://github.com/Hakku/AI-RTFM
+- **Branch:** main
+- **Commit convention:** `feat|fix|refactor|docs|test|chore: description`
+
+## Next Session
+
+User will introduce a new workflow and system into this project. Read context.md and memory.md first, then listen before making changes.
+
+## Session Handoff
+
+Before ending a session, update:
+1. `context.md` — session log, issue status, decisions
+2. `memory.md` — new patterns, fixes, learnings

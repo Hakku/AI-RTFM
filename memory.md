@@ -123,7 +123,7 @@ Copy template → Activate kernel (#hashtag) → Paste AI output → Fill frontm
 
 ### Industry Patterns to Adopt
 - **Prompt versioning:** Add version, last-tested-model, effectiveness-notes to kernel metadata
-- **Explanation doc type:** Consider adding #concept kernel + concept-template.md
+- ~~**Explanation doc type:**~~ ✅ Done — #concept kernel + concept-template.md added
 - **Template writing guides:** Co-locate brief writing guidance with each template (or reference the kernel)
 - **Content reuse:** Evaluate lightweight include/snippet mechanism for shared content
 - **Frontmatter schema:** Define JSON schema for frontmatter validation (industry standard for automated checks)
@@ -157,6 +157,12 @@ Copy template → Activate kernel (#hashtag) → Paste AI output → Fill frontm
 - **Ownership model:** Team-based (`@team-name` format, e.g., @infra-ops, @service-desk)
 - **Company-wide governance:** Too early — focus on IT Ops adoption first
 - **Framework review cycle:** On change only (not scheduled)
+
+## Repository
+
+- **Remote:** https://github.com/Hakku/AI-RTFM
+- **Branch:** main
+- **First push:** 2026-02-04 (36 files, full system)
 
 ## Vocabulary
 
