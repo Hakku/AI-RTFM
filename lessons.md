@@ -18,6 +18,11 @@
 - Over-engineering: unicode decorators for aesthetics broke copy-paste. Aesthetics must not compromise function
 - Mixed languages evolving organically — drift is invisible to creator, obvious to fresh eyes
 
+## Anti-Patterns (Git/GitHub)
+- Testing branch protection by pushing to the branch you're protecting — test AFTER setup is complete, not during
+- Making throwaway commits to real files for testing — use isolated test files or API checks instead
+- GitHub rulesets on free plan require public repo. Private repos need GitHub Team (paid) or rely on discipline
+
 ## Corrections
 - 2026-01-29: Fresh-eyes review catches accumulated drift (mixed languages, dead references, broken paths). Process fix: before release, have unfamiliar reviewer with "find obvious bugs" mandate
 - 2026-01-30: Session handoff discipline — context files must be updated BEFORE ending session. Stale context = confused next session

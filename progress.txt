@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-04
+> Last updated: 2026-02-04 (session 2)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -7,13 +7,14 @@
 - Standards translated to English (documentation-guide, review-process, style-guide) (2026-02-04)
 - Pushed to GitHub Hakku/AI-RTFM (2026-02-04)
 - Workflow migration: replaced context.md/memory.md/.learnings/ with canonical docs + session files (2026-02-04)
+- Repo made public, GitHub ruleset active on main: restrict deletions, block force pushes, require PR (2026-02-04)
 
 ## IN PROGRESS
-- Documentation-first workflow implementation — canonical docs created, session files active
+- (none)
 
 ## NEXT
-- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
 - Re-scope AI-RTFM using interrogation workflow (second planning phase)
+- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
 
 ## KNOWN ISSUES
 - No prompt versioning metadata on kernels (version, last-tested-model) — LOW
@@ -40,6 +41,8 @@
 - Company-wide governance: Too early — IT Ops adoption first (2026-02-04)
 - Review cycles: 30 days for active ops docs; incident=once, ADR=on-change, change=lifecycle (2026-02-04)
 - Concept doc type: #concept kernel + concept-template.md (2026-02-04)
+- Repo visibility: public (enables free-tier ruleset enforcement) (2026-02-04)
+- Branch protection: ruleset on main — require PR, restrict deletions, block force pushes (2026-02-04)
 
 ## OPEN QUESTIONS
 - Content reuse mechanism? (DITA pattern — includes/snippets for shared content)
