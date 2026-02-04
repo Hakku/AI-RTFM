@@ -10,13 +10,15 @@
 - Repo made public, GitHub ruleset active on main: restrict deletions, block force pushes, require PR (2026-02-04)
 - CLAUDE.md restored: Two-Layer Architecture section, Workflow Patterns (Claude Code features) (2026-02-04)
 - Cleaned up test-ruleset.tmp leftover file (2026-02-04)
-- JTBD scoping session: reframed product job from "prevent knowledge loss" to "write docs you're not embarrassed by, fast" (2026-02-05)
+- JTBD scoping session: reframed job to "write docs you're not embarrassed by, fast" (2026-02-05) — SUPERSEDED
 
 ## IN PROGRESS
-- (none)
+- **INTERROGATION:** Fundamental re-scoping of what AI-RTFM is (see SESSION-BRIEF-INTERROGATION.md)
 
 ## NEXT
-- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
+- **START HERE:** Read SESSION-BRIEF-INTERROGATION.md and complete the interrogation
+- After interrogation: Redefine AI-RTFM, update canonical docs accordingly
+- Phase 3 work is ON HOLD until interrogation completes
 
 ## KNOWN ISSUES
 - No prompt versioning metadata on kernels (version, last-tested-model) — LOW
@@ -24,7 +26,8 @@
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
 
 ## DECISIONS
-- **JTBD reframe:** Job is "write docs you're not embarrassed by, fast" — NOT "prevent knowledge loss" (that's an outcome, not the job). Primary user: mid-level engineer who knows systems but can't write. Tool bypasses writing skill, doesn't teach it (2026-02-05)
+- **HALT: Interrogation required before continuing.** JTBD session produced a job definition, but proposed solutions were rejected as "not comprehensive enough" and "not meeting needs." Root cause: we don't actually know what AI-RTFM IS. Building must stop until interrogation is complete (2026-02-05)
+- **JTBD reframe (SUPERSEDED):** Job was defined as "write docs you're not embarrassed by, fast" — but this may be incomplete. Interrogation will validate or revise (2026-02-05)
 - Language: English (system), Finnish (outputs), multi-language future (2026-01-29)
 - Scope: Team resource → company-wide (2026-01-29)
 - Audience: IT Operations, expanding later (2026-01-29)

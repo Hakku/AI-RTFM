@@ -52,6 +52,12 @@
 - **Outcomes ≠ jobs.** "Prevent knowledge loss" is an outcome. "Write docs I'm not embarrassed by, fast" is the job. Jobs are what users actively do; outcomes are what happens after
 - **Grill your own analysis.** First pass JTBD often lands on noble-sounding outcomes (knowledge preservation, team scaling). Real jobs are often more mundane and personal (not looking incompetent, finishing faster)
 
+## Workflow Discipline (2026-02-05)
+- **Interrogation comes FIRST.** The vibe coding workflow says: "Before writing any code, endlessly interrogate my idea. Assume nothing. Ask questions until there's no assumptions left." We skipped this step and jumped to building. Result: built solutions for unclear problems
+- **Analysis ≠ interrogation.** Analyzing whether a workflow fits is not the same as interrogating the product idea. Analysis is meta-work. Interrogation is foundational work
+- **"Not comprehensive enough" = wrong abstraction.** When a solution is rejected for not being comprehensive, the issue is usually that we don't understand the problem, not that the solution needs more features
+- **Stop building when lost.** If the project "has lost direction" — stop. Don't keep building. Interrogate first, then rebuild on solid foundation
+
 ## Industry Alignment
 - **Diátaxis** — 4 doc types (Tutorials, How-to, Reference, Explanation). AI-RTFM covers all via kernels
 - **DITA** — Topic-based authoring, content reuse. AI-RTFM does topic-based but lacks content reuse
