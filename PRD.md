@@ -1,16 +1,44 @@
 # AI-RTFM Product Requirements Document
 
-## Overview
+## Problem Statement
 
-AI-RTFM is a PRISM KERNEL documentation system for IT Operations. It provides structured AI prompts (kernels) and templates that produce consistent, high-quality technical documentation.
+Mid-level IT engineers know their systems but struggle to write documentation. Generic AI prompts produce inconsistent, embarrassing output. Under time pressure, engineers either write bad docs, copy-paste old ones (accumulating cruft), or skip documentation entirely. AI-RTFM provides structured prompts that make AI produce professional-quality docs on the first try—so engineers can document quickly without the result looking like amateur hour.
 
-**Why:** Documentation is the #1 bottleneck in IT operations scaling. Teams write inconsistently, knowledge lives in heads, and AI-generated docs are unreliable without structure. AI-RTFM solves this with pre-optimized prompts that enforce quality standards.
+## Job to Be Done
+
+**When** a mid-level IT engineer needs to document something and doesn't have time to struggle with writing,
+**they want** structured prompts that make AI produce professional output immediately,
+**so they can** ship docs they're not embarrassed by, fast.
+
+### What AI-RTFM Is NOT Hired For
+
+- **Knowledge management strategy** — AI-RTFM doesn't decide what to document
+- **Writing skill development** — Users don't learn to write better; they bypass the skill gap
+- **Documentation culture change** — AI-RTFM is a tool, not an organizational intervention
+
+### Impact Map
+
+```
+GOAL: Write docs you're not embarrassed by, fast
+  │
+  ├── ACTOR: Mid-level engineer (primary)
+  │     ├── IMPACT: Produces professional output without writing skill
+  │     │     └── DELIVERABLE: PRISM kernels (structured prompts)
+  │     ├── IMPACT: Knows what sections to include without guessing
+  │     │     └── DELIVERABLE: Templates with standard structure
+  │     └── IMPACT: Gets consistent results every time
+  │           └── DELIVERABLE: Pre-tested prompts that work reliably
+  │
+  └── ACTOR: Senior engineer (reviewer)
+        └── IMPACT: Spends less time rewriting junior docs
+              └── DELIVERABLE: Kernels that front-load quality requirements
+```
 
 ## Target Users
 
-- **Primary:** IT Operations teams (infrastructure, service desk, security)
-- **Expansion:** Company-wide (all teams producing technical documentation)
-- **Personas:** Engineers writing runbooks, incident responders documenting post-mortems, architects recording decisions, onboarding leads creating guides
+- **Primary:** Mid-level IT engineers — knows systems, can't write well, time-pressured
+- **Secondary:** Senior engineers — reviews docs, benefits from consistent input quality
+- **Expansion:** Any technical team where writing is the bottleneck, not knowledge
 
 ## Features
 
@@ -32,10 +60,10 @@ AI-RTFM is a PRISM KERNEL documentation system for IT Operations. It provides st
 
 ## Success Criteria
 
-1. IT Ops team adopts AI-RTFM for all new documentation
-2. Documentation consistency measurably improves (fewer format variations)
-3. Time-to-document decreases (junior engineers can produce docs without asking for help)
-4. System scales to at least one additional team beyond IT Ops
+1. **First-draft quality:** Docs produced with kernels require minimal revision before publishing
+2. **Speed:** Engineer documents a system in <30 min that would take 2+ hours freehand
+3. **Reviewer burden:** Senior engineers stop rewriting junior docs; reviews become approvals
+4. **Repeat use:** Engineers who try it once keep using it (tool is faster than alternatives)
 
 ## Scope
 
@@ -56,10 +84,14 @@ AI-RTFM is a PRISM KERNEL documentation system for IT Operations. It provides st
 
 ## Non-Goals
 
-- Replacing existing documentation — AI-RTFM structures new documentation, doesn't migrate old docs
-- Enforcing a single writing style — kernels guide, they don't restrict creativity
-- Building a documentation platform/app — this is a methodology + file system, not software
-- Competing with enterprise CCMS tools (DITA, Paligo) — different weight class
+**AI-RTFM is a writing tool, not:**
+
+- **A knowledge management system** — Doesn't decide what to document, track coverage, or manage knowledge lifecycle
+- **A documentation platform** — No UI, no rendering, no hosting. Methodology + files only
+- **A migration tool** — Structures new docs, doesn't fix old ones
+- **A training program** — Users don't learn to write better; they use prompts that bypass the skill gap
+- **An organizational change agent** — Won't fix documentation culture; just makes writing faster for those who use it
+- **Enterprise CCMS** — Not competing with DITA, Paligo, or content reuse systems
 
 ## Language Strategy
 

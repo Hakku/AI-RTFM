@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-04 (session 3)
+> Last updated: 2026-02-05 (session 4)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -10,13 +10,13 @@
 - Repo made public, GitHub ruleset active on main: restrict deletions, block force pushes, require PR (2026-02-04)
 - CLAUDE.md restored: Two-Layer Architecture section, Workflow Patterns (Claude Code features) (2026-02-04)
 - Cleaned up test-ruleset.tmp leftover file (2026-02-04)
+- JTBD scoping session: reframed product job from "prevent knowledge loss" to "write docs you're not embarrassed by, fast" (2026-02-05)
 
 ## IN PROGRESS
 - (none)
 
 ## NEXT
-- **START HERE:** Read SESSION-BRIEF-JTBD.md and execute JTBD scoping session
-- After scoping: Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
+- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
 
 ## KNOWN ISSUES
 - No prompt versioning metadata on kernels (version, last-tested-model) — LOW
@@ -24,6 +24,7 @@
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
 
 ## DECISIONS
+- **JTBD reframe:** Job is "write docs you're not embarrassed by, fast" — NOT "prevent knowledge loss" (that's an outcome, not the job). Primary user: mid-level engineer who knows systems but can't write. Tool bypasses writing skill, doesn't teach it (2026-02-05)
 - Language: English (system), Finnish (outputs), multi-language future (2026-01-29)
 - Scope: Team resource → company-wide (2026-01-29)
 - Audience: IT Operations, expanding later (2026-01-29)

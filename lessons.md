@@ -47,6 +47,11 @@
 - **Wardley Mapping**: Wrong tool for documentation systems — designed for competitive business strategy
 - Rule: Pick one framework, run it clean. Framework shopping during execution causes drift
 
+## JTBD Insights (2026-02-05)
+- **"All options apply" in JTBD = no focus.** If every trigger/job/emotion matters equally, you haven't found the real job. Force prioritization
+- **Outcomes ≠ jobs.** "Prevent knowledge loss" is an outcome. "Write docs I'm not embarrassed by, fast" is the job. Jobs are what users actively do; outcomes are what happens after
+- **Grill your own analysis.** First pass JTBD often lands on noble-sounding outcomes (knowledge preservation, team scaling). Real jobs are often more mundane and personal (not looking incompetent, finishing faster)
+
 ## Industry Alignment
 - **Diátaxis** — 4 doc types (Tutorials, How-to, Reference, Explanation). AI-RTFM covers all via kernels
 - **DITA** — Topic-based authoring, content reuse. AI-RTFM does topic-based but lacks content reuse
