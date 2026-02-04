@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-04 (session 2)
+> Last updated: 2026-02-04 (session 3)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -8,6 +8,8 @@
 - Pushed to GitHub Hakku/AI-RTFM (2026-02-04)
 - Workflow migration: replaced context.md/memory.md/.learnings/ with canonical docs + session files (2026-02-04)
 - Repo made public, GitHub ruleset active on main: restrict deletions, block force pushes, require PR (2026-02-04)
+- CLAUDE.md restored: Two-Layer Architecture section, Workflow Patterns (Claude Code features) (2026-02-04)
+- Cleaned up test-ruleset.tmp leftover file (2026-02-04)
 
 ## IN PROGRESS
 - (none)

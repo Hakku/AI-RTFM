@@ -19,6 +19,15 @@ Before starting any new feature, scope change, or project phase:
 
 AI-RTFM: PRISM KERNEL documentation system for IT Operations teams, with goal to expand company-wide.
 
+## Two-Layer Architecture
+
+| Layer | Purpose | Files |
+|-------|---------|-------|
+| **Project management** | Developing AI-RTFM itself | progress.txt, lessons.md, canonical docs (PRD, APP_FLOW, TECH_STACK, IMPLEMENTATION_PLAN) |
+| **Documentation system** | The deliverable for teams | templates/, kernels/, standards/, training materials |
+
+Do not conflate these. Project management tracks development work. The documentation system is the product.
+
 ## Canonical Docs
 
 | Doc | Purpose |
@@ -48,6 +57,22 @@ AI-RTFM: PRISM KERNEL documentation system for IT Operations teams, with goal to
 3. **Language** — system files in English, output examples can be Finnish
 4. **Tags** — use only tags from standards/tag-taxonomy.md
 5. **Examples must work** — test any kernel/template changes before committing
+
+## Workflow Patterns
+
+### Plan Mode (Claude Code)
+- Start complex tasks in plan mode — front-load planning for one-shot implementation
+- When blocked or off-track, return to plan mode — don't push through
+- Use plan mode for verification design, not just building
+
+### Subagents (Claude Code)
+- Add "use subagents" to prompts for parallel computation on independent subtasks
+- Offload discrete tasks to subagents to preserve main context window
+
+### Understanding
+- Request ASCII diagrams for protocols/architectures when reviewing unfamiliar systems
+
+Note: Review triggers ("Grill me", "Prove it", "Elegant") and self-improvement rules are in global CLAUDE.md.
 
 ## File Quick Reference
 
