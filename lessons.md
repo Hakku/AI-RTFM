@@ -39,6 +39,14 @@
 - llms.txt (Sept 2024, Jeremy Howard/Answer.AI) — AI-readable site index, like sitemap for AI
 - MCP (Anthropic) — open standard for AI-to-system integration, enables auto-updating docs
 
+## Framework Selection (Brainstorming/Scoping)
+- **Jobs-to-be-Done**: Best for scoping — low friction, asks "what job is the product hired to do?" Avoids feature-first thinking
+- **Impact Mapping**: Good complement — structures output as Goal → Actors → Impacts → Deliverables
+- **Content Strategy (Halvorson)**: Use later for governance/workflow, too heavy for initial scoping
+- **Double Diamond**: Overkill for refining existing products — designed for greenfield design problems
+- **Wardley Mapping**: Wrong tool for documentation systems — designed for competitive business strategy
+- Rule: Pick one framework, run it clean. Framework shopping during execution causes drift
+
 ## Industry Alignment
 - **Diátaxis** — 4 doc types (Tutorials, How-to, Reference, Explanation). AI-RTFM covers all via kernels
 - **DITA** — Topic-based authoring, content reuse. AI-RTFM does topic-based but lacks content reuse

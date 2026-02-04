@@ -15,8 +15,8 @@
 - (none)
 
 ## NEXT
-- Re-scope AI-RTFM using interrogation workflow (second planning phase)
-- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
+- **START HERE:** Read SESSION-BRIEF-JTBD.md and execute JTBD scoping session
+- After scoping: Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
 
 ## KNOWN ISSUES
 - No prompt versioning metadata on kernels (version, last-tested-model) — LOW
