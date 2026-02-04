@@ -93,6 +93,7 @@ Note: Review triggers ("Grill me", "Prove it", "Elegant") and self-improvement r
 | Search tool | tools/search.ps1 |
 | Stale finder | tools/stale-finder.ps1 |
 | Training flow | DEMO.md → ONBOARDING.md → WORKSHOP.md |
+| JTBD session brief | SESSION-BRIEF-JTBD.md |
 
 ## Language
 
