@@ -27,6 +27,7 @@
 - 2026-01-29: Fresh-eyes review catches accumulated drift (mixed languages, dead references, broken paths). Process fix: before release, have unfamiliar reviewer with "find obvious bugs" mandate
 - 2026-01-30: Session handoff discipline — context files must be updated BEFORE ending session. Stale context = confused next session
 - 2026-01-30: PowerShell variable `$incomplete` collided with `-Incomplete` switch parameter. Fix: renamed to `$incompleteDocs`. Avoid variable names matching parameter names in PowerShell
+- 2026-02-04: Plans from previous sessions are not sacred. Critique before executing: verify attributions, check for redundancy with existing rules, confirm referenced features exist. Blind plan execution causes drift and duplication
 
 ## Domain Knowledge
 - PRISM = Purpose, Rules, Identity, Structure, Motion (5 components)
