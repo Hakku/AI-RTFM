@@ -1,0 +1,46 @@
+# AI-RTFM Progress
+> Last updated: 2026-02-04
+
+## COMPLETED
+- Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
+- Phase 2 (Discoverability): tag taxonomy, llms.txt, search/stale tools, 6 missing templates, #concept kernel, review cycle standardization, date fixes, llms.txt corrections (2026-01-30, 2026-02-04)
+- Standards translated to English (documentation-guide, review-process, style-guide) (2026-02-04)
+- Pushed to GitHub Hakku/AI-RTFM (2026-02-04)
+- Workflow migration: replaced context.md/memory.md/.learnings/ with canonical docs + session files (2026-02-04)
+
+## IN PROGRESS
+- Documentation-first workflow implementation — canonical docs created, session files active
+
+## NEXT
+- Phase 3, step 3.1: Build frontmatter validation script (PowerShell)
+- Re-scope AI-RTFM using interrogation workflow (second planning phase)
+
+## KNOWN ISSUES
+- No prompt versioning metadata on kernels (version, last-tested-model) — LOW
+- No rendered docs site (raw markdown only) — LOW
+- Templates lack co-located writing guides (Good Docs Project pattern) — LOW
+
+## DECISIONS
+- Language: English (system), Finnish (outputs), multi-language future (2026-01-29)
+- Scope: Team resource → company-wide (2026-01-29)
+- Audience: IT Operations, expanding later (2026-01-29)
+- Kernels: Version-controlled, shared (2026-01-29)
+- Two-layer architecture: Project mgmt separate from doc system (2026-01-29)
+- Kernel simplification: Executed — plain English format (2026-01-29)
+- Validation tooling: PowerShell, full checks (frontmatter, lint, links, style, stale) (2026-02-04)
+- Validation severity: FAIL: frontmatter/internal links/>400 lines. WARN: style/external links/tags (2026-02-04)
+- CI/CD platform: Deferred — not ready yet (2026-02-04)
+- Prompt library: Full (review, maintenance, analysis) in kernels/ subdirectories (2026-02-04)
+- RAG preparation: All documentation, full semantic frontmatter enrichment (2026-02-04)
+- MCP: Phase 4 scope (2026-02-04)
+- Doc size limit: Strict max ~400 lines (2026-02-04)
+- Ownership model: Team-based (@team-name format) (2026-02-04)
+- Frontmatter enrichment: audience, complexity, dependencies, keywords, summary, language (2026-02-04)
+- Framework review cycle: On change only, not scheduled (2026-02-04)
+- Company-wide governance: Too early — IT Ops adoption first (2026-02-04)
+- Review cycles: 30 days for active ops docs; incident=once, ADR=on-change, change=lifecycle (2026-02-04)
+- Concept doc type: #concept kernel + concept-template.md (2026-02-04)
+
+## OPEN QUESTIONS
+- Content reuse mechanism? (DITA pattern — includes/snippets for shared content)
+- Rendered docs site? (Stripe/Twilio pattern — currently raw markdown only)

@@ -2,45 +2,63 @@
 
 ## Session Startup
 
-**Always read first:**
-1. `context.md` - Current state, blockers, decisions
-2. `memory.md` - Domain knowledge, patterns, relationships
+1. Read `progress.txt` — current state, what's done, what's next
+2. Read `lessons.md` — patterns, anti-patterns, domain knowledge
+3. Check current step in `IMPLEMENTATION_PLAN.md`
+
+## Interrogation Rule
+
+Before starting any new feature, scope change, or project phase:
+- Switch to planning mode
+- Interrogate the idea: assume nothing, ask until no assumptions remain
+- Questions to cover: who is this for, what's the core action, what data is involved, what happens on success/error, what dependencies exist, what's explicitly out of scope
+- Generate/update canonical docs from interrogation answers
+- Only then begin implementation
 
 ## What
 
 AI-RTFM: PRISM KERNEL documentation system for IT Operations teams, with goal to expand company-wide.
 
-## Two-Layer Architecture
+## Canonical Docs
 
-| Layer | Purpose | Files |
-|-------|---------|-------|
-| **Project management** | Developing AI-RTFM itself | context.md, memory.md, .learnings/ |
-| **Documentation system** | The deliverable for teams | templates/, kernels/, standards/, training materials |
+| Doc | Purpose |
+|-----|---------|
+| PRD.md | What we're building, for whom, scope |
+| APP_FLOW.md | User workflows and interaction paths |
+| TECH_STACK.md | Locked tools, versions, dependencies |
+| IMPLEMENTATION_PLAN.md | Step-by-step build sequence with current position |
 
-Do not conflate these. Project management tracks development work. The documentation system is the product.
+## Session Files
 
-## Critical Context
+| File | Purpose |
+|------|---------|
+| progress.txt | Session state, decisions, what's done/next (update every session) |
+| lessons.md | Patterns, anti-patterns, corrections, domain knowledge (update on learning) |
 
-### Phase Status
-- **Phase 1 (Hardening):** ✅ Complete
-- **Phase 2 (Discoverability):** ✅ Complete
-- **Phase 3 (Automation):** Next (CI/CD, hooks)
-- **Phase 4 (Intelligence):** Future (MCP, agentic)
+## Self-Improvement
 
-### Completed Work
-- Language: English (system files converted)
-- Kernels: Simplified to plain English format (12 kernels, incl. #concept)
-- Templates: All 12 kernels have matching templates
-- Path references: Fixed (no more `docs/` prefix)
-- Discoverability: llms.txt, tag taxonomy, search/stale tools
-- Review cycles: Standardized to 30 days for active docs
-- Example docs: Dates current (2026)
-- Git: Pushed to https://github.com/Hakku/AI-RTFM
+- After every correction → update lessons.md
+- After every session → update progress.txt
+- After every pattern discovery → update lessons.md
+
+## Working Rules
+
+1. **Never edit kernels without updating ALL dependent files** (DEMO, ONBOARDING, WORKSHOP, QUICK-REFERENCE, README)
+2. **Check path references** — use relative paths from root, not `docs/`
+3. **Language** — system files in English, output examples can be Finnish
+4. **Tags** — use only tags from standards/tag-taxonomy.md
+5. **Examples must work** — test any kernel/template changes before committing
 
 ## File Quick Reference
 
 | Need | File |
 |------|------|
+| Product requirements | PRD.md |
+| User workflows | APP_FLOW.md |
+| Tech dependencies | TECH_STACK.md |
+| Build sequence | IMPLEMENTATION_PLAN.md |
+| Session state | progress.txt |
+| Lessons learned | lessons.md |
 | Kernel definitions | kernels/it-ops-kernels.md |
 | Template list | templates/*.md (12 types) |
 | Tag taxonomy | standards/tag-taxonomy.md |
@@ -50,14 +68,6 @@ Do not conflate these. Project management tracks development work. The documenta
 | Search tool | tools/search.ps1 |
 | Stale finder | tools/stale-finder.ps1 |
 | Training flow | DEMO.md → ONBOARDING.md → WORKSHOP.md |
-
-## Working Rules
-
-1. **Never edit kernels without updating ALL dependent files** (DEMO, ONBOARDING, WORKSHOP, QUICK-REFERENCE, README)
-2. **Check path references** — use relative paths from root, not `docs/`
-3. **Language** — system files in English, output examples can be Finnish
-4. **Tags** — use only tags from standards/tag-taxonomy.md
-5. **Examples must work** — test any kernel/template changes before committing
 
 ## Language
 
@@ -74,13 +84,3 @@ Before deleting any file, copy to `.backup/filename.YYYYMMDD`
 - **Remote:** https://github.com/Hakku/AI-RTFM
 - **Branch:** main
 - **Commit convention:** `feat|fix|refactor|docs|test|chore: description`
-
-## Next Session
-
-User will introduce a new workflow and system into this project. Read context.md and memory.md first, then listen before making changes.
-
-## Session Handoff
-
-Before ending a session, update:
-1. `context.md` — session log, issue status, decisions
-2. `memory.md` — new patterns, fixes, learnings
