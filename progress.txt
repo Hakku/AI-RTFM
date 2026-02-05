@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-05 (session 4)
+> Last updated: 2026-02-06 (session 5)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -11,13 +11,15 @@
 - CLAUDE.md restored: Two-Layer Architecture section, Workflow Patterns (Claude Code features) (2026-02-04)
 - Cleaned up test-ruleset.tmp leftover file (2026-02-04)
 - JTBD scoping session: reframed job to "write docs you're not embarrassed by, fast" (2026-02-05) — SUPERSEDED
+- Fresh-eyes codebase audit: full read of every file, produced honest assessment of what exists (2026-02-06)
 
 ## IN PROGRESS
 - **INTERROGATION:** Fundamental re-scoping of what AI-RTFM is (see SESSION-BRIEF-INTERROGATION.md)
+- User has additional context about the interrogation system and broader scope — will continue next session
 
 ## NEXT
-- **START HERE:** Read SESSION-BRIEF-INTERROGATION.md and complete the interrogation
-- After interrogation: Redefine AI-RTFM, update canonical docs accordingly
+- **START HERE:** User will share more about the interrogation system and full scope vision
+- After that: complete interrogation, redefine AI-RTFM, update canonical docs
 - Phase 3 work is ON HOLD until interrogation completes
 
 ## KNOWN ISSUES
@@ -27,6 +29,7 @@
 
 ## DECISIONS
 - **HALT: Interrogation required before continuing.** JTBD session produced a job definition, but proposed solutions were rejected as "not comprehensive enough" and "not meeting needs." Root cause: we don't actually know what AI-RTFM IS. Building must stop until interrogation is complete (2026-02-05)
+- **Fresh-eyes audit findings (2026-02-06):** Product is ~30 deliverable files (kernels, templates, examples, standards, training, tools). Meta/project-management layer is disproportionate (~25 files managing a content package as if it were software). PRISM methodology and training materials are the strongest parts. Identity crisis confirmed: IMPLEMENTATION_PLAN has software engineering phases for a non-software product
 - **JTBD reframe (SUPERSEDED):** Job was defined as "write docs you're not embarrassed by, fast" — but this may be incomplete. Interrogation will validate or revise (2026-02-05)
 - Language: English (system), Finnish (outputs), multi-language future (2026-01-29)
 - Scope: Team resource → company-wide (2026-01-29)
@@ -53,3 +56,4 @@
 ## OPEN QUESTIONS
 - Content reuse mechanism? (DITA pattern — includes/snippets for shared content)
 - Rendered docs site? (Stripe/Twilio pattern — currently raw markdown only)
+- Is AI-RTFM a starter kit that's essentially done, or the foundation for something bigger? Fresh-eyes audit surfaced this as the core question (2026-02-06)
