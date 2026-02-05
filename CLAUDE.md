@@ -4,7 +4,8 @@
 
 1. Read `progress.txt` — current state, what's done, what's next
 2. Read `lessons.md` — patterns, anti-patterns, domain knowledge
-3. Check current step in `IMPLEMENTATION_PLAN.md`
+3. **IF interrogation in progress:** Read `SESSION-BRIEF-INTERROGATION.md` first
+4. Otherwise: Check current step in `IMPLEMENTATION_PLAN.md`
 
 ## Interrogation Rule
 
@@ -94,6 +95,7 @@ Note: Review triggers ("Grill me", "Prove it", "Elegant") and self-improvement r
 | Stale finder | tools/stale-finder.ps1 |
 | Training flow | DEMO.md → ONBOARDING.md → WORKSHOP.md |
 | JTBD session brief | SESSION-BRIEF-JTBD.md |
+| Interrogation brief | SESSION-BRIEF-INTERROGATION.md (ACTIVE) |
 
 ## Language
 
