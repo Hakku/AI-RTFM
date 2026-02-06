@@ -1,6 +1,6 @@
-# AI-RTFM Documentation System
+# AI-RTFM Documentation Toolkit
 
-> IT Operations documentation using PRISM KERNEL methodology. Contains runbooks, incident reports, architecture decisions, and knowledge base articles for technical teams.
+> Documentation toolkit for corporate IT teams using PRISM KERNEL methodology. Three components: standard folder structure + templates, AI-powered writing prompts (PRISM Kernels), and a process layer. Contains runbooks, incident reports, architecture decisions, and knowledge base articles.
 
 ## Runbooks
 

@@ -10,6 +10,10 @@
 - English for system files, Finnish for outputs — scales globally while serving local teams
 
 ## Anti-Patterns
+- **Over-engineering the meta layer:** ~25 project management files managing ~30 deliverable files. "If it feels over-engineered, it is." Meta work should be proportionate to the product it serves
+- **Expanding when you should be tightening:** Old roadmap (automation, RAG, MCP, agentic workflows) was building infrastructure for unclear goals. New roadmap (fix prompts first) attacks the weakest link directly. Resist feature creep; improve what exists
+- **Agent assessment overriding user assessment:** Fresh-eyes audit rated kernels/prompts positively. User (the creator, daily user) assessed them as weak. User assessment of product quality always overrides automated/agent analysis — they have ground truth
+- **Building infrastructure before fixing fundamentals:** Validation scripts, CI/CD, JSON schema were Phase 3 items while the actual prompts (the core product) were known to be weak. Fix the thing that matters most first
 - Editing kernels without updating ALL dependent files (DEMO, ONBOARDING, WORKSHOP, QUICK-REFERENCE, README) — breaks training materials
 - Using `docs/` prefix in paths — files are at root, not in docs/
 - Writing system files in Finnish — blocks global scalability
