@@ -76,6 +76,7 @@ See `.claude/rules/` for domain-specific rules:
 | AI index | llms.txt |
 | Search tool | tools/search.ps1 |
 | Stale finder | tools/stale-finder.ps1 |
+| Contributor workflow | WORKFLOW.md |
 | Training flow | DEMO.md → ONBOARDING.md → WORKSHOP.md |
 | Interrogation brief | SESSION-BRIEF-INTERROGATION.md (ACTIVE) |
 

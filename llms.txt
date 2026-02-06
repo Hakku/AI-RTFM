@@ -44,6 +44,10 @@
 
 - [IT Operations Kernels](kernels/it-ops-kernels.md): AI prompt library with 12 kernels for generating documentation (techdoc, incident, adr, kb, change, onboard, api, security, compliance, iac, dr, concept).
 
+## Contributor Guide
+
+- [Developer Workflow](WORKFLOW.md): How to work on AI-RTFM using Claude Code. Covers session startup, rules system, skills pipeline, session files, canonical docs, git workflow, and self-improvement loop.
+
 ## Training
 
 - [Quick Reference Card](QUICK-REFERENCE.md): One-page reference for common tasks and workflows.

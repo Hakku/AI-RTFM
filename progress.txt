@@ -24,6 +24,7 @@
 
 ## IN PROGRESS
 - **Interrogation phase** — next step: run /interrogation skill to answer open questions in SESSION-BRIEF-INTERROGATION.md
+- Created WORKFLOW.md — developer/contributor guide for working on AI-RTFM with Claude Code (2026-02-07)
 
 ## NEXT
 - **START HERE:** Run `/interrogation` skill with SESSION-BRIEF-INTERROGATION.md
