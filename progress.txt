@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-06 (session 5)
+> Last updated: 2026-02-06 (session 6)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -12,48 +12,40 @@
 - Cleaned up test-ruleset.tmp leftover file (2026-02-04)
 - JTBD scoping session: reframed job to "write docs you're not embarrassed by, fast" (2026-02-05) — SUPERSEDED
 - Fresh-eyes codebase audit: full read of every file, produced honest assessment of what exists (2026-02-06)
+- **Phase 1 context re-alignment:** PRD rewritten (three-component framing, new roadmap, known issues, creator context, working rules), IMPLEMENTATION_PLAN roadmap replaced, README/llms.txt/TECH_STACK/CLAUDE.md updated to match context package (2026-02-06)
 
 ## IN PROGRESS
-- **INTERROGATION:** Fundamental re-scoping of what AI-RTFM is (see SESSION-BRIEF-INTERROGATION.md)
-- User has additional context about the interrogation system and broader scope — will continue next session
+- **Phase 2 workflow re-alignment** — training materials, APP_FLOW, session briefs need updating (next session)
 
 ## NEXT
-- **START HERE:** User will share more about the interrogation system and full scope vision
-- After that: complete interrogation, redefine AI-RTFM, update canonical docs
-- Phase 3 work is ON HOLD until interrogation completes
+- Phase 2 workflow re-alignment (training, APP_FLOW, process files)
+- Phase 3 verification pass
+- Begin interrogation phase for prompt redesign
+- Phase 3: Redesign PRISM prompts (current priority per new roadmap)
 
 ## KNOWN ISSUES
-- No prompt versioning metadata on kernels (version, last-tested-model) — LOW
+- **Prompts are weak** — PRISM Kernels need proper redesign (HIGH — this is the next real work)
 - No rendered docs site (raw markdown only) — LOW
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
 
 ## DECISIONS
+- **Context package received (2026-02-06):** Definitive project identity from creator. AI-RTFM = documentation toolkit (three components: folder structure + templates, AI prompts, process layer). Direction is tightening, not expanding
+- **New roadmap (2026-02-06):** 1) Redesign PRISM prompts, 2) Build prompt generator UI, 3) Model-agnostic/versioned prompts, 4) Self-improving prompt library → production app at Luhta. Old roadmap (validation scripts, CI/CD, RAG, MCP) is retired
+- **Prompts assessed as weak (2026-02-06):** User assessment overrides agent analysis. Prompt redesign is the highest priority
+- **10-minute user (2026-02-06):** Time target tightened from 30 min to 10 min. Every feature must justify itself against "does this help someone with 10 minutes?"
+- **Production app on roadmap (2026-02-06):** "Application UI/frontend" removed from Out of Scope — it's on the new roadmap
 - **HALT: Interrogation required before continuing.** JTBD session produced a job definition, but proposed solutions were rejected as "not comprehensive enough" and "not meeting needs." Root cause: we don't actually know what AI-RTFM IS. Building must stop until interrogation is complete (2026-02-05)
 - **Fresh-eyes audit findings (2026-02-06):** Product is ~30 deliverable files (kernels, templates, examples, standards, training, tools). Meta/project-management layer is disproportionate (~25 files managing a content package as if it were software). PRISM methodology and training materials are the strongest parts. Identity crisis confirmed: IMPLEMENTATION_PLAN has software engineering phases for a non-software product
 - **JTBD reframe (SUPERSEDED):** Job was defined as "write docs you're not embarrassed by, fast" — but this may be incomplete. Interrogation will validate or revise (2026-02-05)
 - Language: English (system), Finnish (outputs), multi-language future (2026-01-29)
-- Scope: Team resource → company-wide (2026-01-29)
+- Scope: Team resource -> company-wide (2026-01-29)
 - Audience: IT Operations, expanding later (2026-01-29)
 - Kernels: Version-controlled, shared (2026-01-29)
 - Two-layer architecture: Project mgmt separate from doc system (2026-01-29)
 - Kernel simplification: Executed — plain English format (2026-01-29)
-- Validation tooling: PowerShell, full checks (frontmatter, lint, links, style, stale) (2026-02-04)
-- Validation severity: FAIL: frontmatter/internal links/>400 lines. WARN: style/external links/tags (2026-02-04)
-- CI/CD platform: Deferred — not ready yet (2026-02-04)
-- Prompt library: Full (review, maintenance, analysis) in kernels/ subdirectories (2026-02-04)
-- RAG preparation: All documentation, full semantic frontmatter enrichment (2026-02-04)
-- MCP: Phase 4 scope (2026-02-04)
-- Doc size limit: Strict max ~400 lines (2026-02-04)
-- Ownership model: Team-based (@team-name format) (2026-02-04)
-- Frontmatter enrichment: audience, complexity, dependencies, keywords, summary, language (2026-02-04)
-- Framework review cycle: On change only, not scheduled (2026-02-04)
-- Company-wide governance: Too early — IT Ops adoption first (2026-02-04)
-- Review cycles: 30 days for active ops docs; incident=once, ADR=on-change, change=lifecycle (2026-02-04)
-- Concept doc type: #concept kernel + concept-template.md (2026-02-04)
 - Repo visibility: public (enables free-tier ruleset enforcement) (2026-02-04)
 - Branch protection: ruleset on main — require PR, restrict deletions, block force pushes (2026-02-04)
 
 ## OPEN QUESTIONS
-- Content reuse mechanism? (DITA pattern — includes/snippets for shared content)
-- Rendered docs site? (Stripe/Twilio pattern — currently raw markdown only)
-- Is AI-RTFM a starter kit that's essentially done, or the foundation for something bigger? Fresh-eyes audit surfaced this as the core question (2026-02-06)
+- How should prompt redesign be structured? (interrogation will answer)
+- What does "good output" look like for each kernel type? (interrogation will answer)

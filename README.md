@@ -1,6 +1,6 @@
-# Documentation System - Quick Start
+# AI-RTFM Documentation Toolkit - Quick Start
 
-Welcome! This is the IT department's documentation system based on the PRISM KERNEL methodology.
+Welcome! AI-RTFM is a documentation toolkit for corporate IT teams, built on the PRISM KERNEL methodology. Three components: standard folder structure + templates, AI-powered writing prompts (PRISM Kernels), and a process layer (naming, review, maintenance).
 
 ## 🚀 Get Started (5 minutes)
 
@@ -220,8 +220,8 @@ Reason: Team expertise, better tooling, ACID native
 **AI + PRISM Kernel:**
 - Activate kernel: 10 seconds
 - AI creates structure: 30 seconds
-- Fill in details: 20 min
-- **Total: ~20-30 min** ⚡
+- Fill in details: ~10 min
+- **Total: ~10 min** ⚡
 
 ### 2. Use kernels for different document types
 ```

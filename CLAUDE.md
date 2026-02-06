@@ -18,16 +18,16 @@ Before starting any new feature, scope change, or project phase:
 
 ## What
 
-AI-RTFM: PRISM KERNEL documentation system for IT Operations teams, with goal to expand company-wide.
+AI-RTFM: PRISM KERNEL documentation toolkit for IT Operations teams, with goal to expand company-wide.
 
 ## Two-Layer Architecture
 
 | Layer | Purpose | Files |
 |-------|---------|-------|
 | **Project management** | Developing AI-RTFM itself | progress.txt, lessons.md, canonical docs (PRD, APP_FLOW, TECH_STACK, IMPLEMENTATION_PLAN) |
-| **Documentation system** | The deliverable for teams | templates/, kernels/, standards/, training materials |
+| **Documentation toolkit** | The deliverable for teams | templates/, kernels/, standards/, training materials |
 
-Do not conflate these. Project management tracks development work. The documentation system is the product.
+Do not conflate these. Project management tracks development work. The documentation toolkit is the product.
 
 ## Canonical Docs
 

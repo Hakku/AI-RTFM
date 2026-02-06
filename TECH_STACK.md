@@ -21,7 +21,7 @@
 
 | Tool | Version | Purpose |
 |------|---------|---------|
-| Claude Code | Claude Opus 4.5 | Primary development AI |
+| Claude Code | Claude Opus 4.6 | Primary development AI |
 | PRISM Kernels | 12 kernels | Structured AI prompts for documentation |
 
 ## Standards
@@ -33,14 +33,13 @@
 | Style guide | Writing standards (standards/style-guide.md) |
 | Review process | Quality gates (standards/review-process.md) |
 
-## Not Yet Adopted (Deferred)
+## Roadmap Items (Not Yet Adopted)
 
-| Tool | Blocked By | Notes |
-|------|------------|-------|
-| CI/CD platform | Platform decision | GitHub Actions likely, not confirmed |
-| Rendered docs site | Phase 4+ | Currently raw markdown only |
-| MCP integration | Phase 4 | AI-to-system real-time integration |
-| JSON Schema | Phase 3 | Frontmatter validation schema |
+| Tool | Phase | Notes |
+|------|-------|-------|
+| Prompt generator UI | Phase 4 | Web-based or local tool for creating PRISM prompts |
+| Multi-model support | Phase 5 | Model-agnostic prompt versioning |
+| Rendered docs site | Future | Currently raw markdown only |
 
 ## Constraints
 
