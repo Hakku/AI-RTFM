@@ -56,6 +56,12 @@
 - **Outcomes ≠ jobs.** "Prevent knowledge loss" is an outcome. "Write docs I'm not embarrassed by, fast" is the job. Jobs are what users actively do; outcomes are what happens after
 - **Grill your own analysis.** First pass JTBD often lands on noble-sounding outcomes (knowledge preservation, team scaling). Real jobs are often more mundane and personal (not looking incompetent, finishing faster)
 
+## Workflow Infrastructure (2026-02-06)
+- **Claude Code `.claude/rules/` > monolithic CLAUDE.md:** Anthropic explicitly warns that bloated CLAUDE.md files cause Claude to ignore instructions. Modular rule files in `.claude/rules/` are path-scoped and auto-loaded. Keep CLAUDE.md under 100 lines for session essentials only
+- **Workflow systems need adaptation, not adoption:** The "vibe coding workflow" was designed for app development. AI-RTFM started as a content project. Map external workflow primitives to your tool's native features (rules/ for rules, skills/ for prompts) rather than copying wholesale
+- **Skills system is the right vehicle for reusable prompts:** Interrogation and doc-generation are repeatable processes, not one-time tasks. `.claude/skills/` makes them invokable via `/command`, with dynamic context injection from project files
+- **Reject rules that fight your tools:** "No file overwrites" → git handles versioning. "tasks/todo.md" → Claude Code has built-in TaskCreate. Don't add process overhead that duplicates existing tooling
+
 ## Workflow Discipline (2026-02-05)
 - **Interrogation comes FIRST.** The vibe coding workflow says: "Before writing any code, endlessly interrogate my idea. Assume nothing. Ask questions until there's no assumptions left." We skipped this step and jumped to building. Result: built solutions for unclear problems
 - **Analysis ≠ interrogation.** Analyzing whether a workflow fits is not the same as interrogating the product idea. Analysis is meta-work. Interrogation is foundational work

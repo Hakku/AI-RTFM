@@ -1,5 +1,7 @@
 # AI-RTFM User Workflow Flows
 
+> **Status:** Toolkit flows below are current. Application flows (Prompt Generator UI) are **pending interrogation** — they will be defined during the interrogation phase via `/interrogation` and `/doc-generation` skills. Do NOT write app flows until interrogation is complete.
+
 ## Documentation Creation Flow
 
 ```
