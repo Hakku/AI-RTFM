@@ -15,13 +15,13 @@
 - **Phase 1 context re-alignment:** PRD rewritten (three-component framing, new roadmap, known issues, creator context, working rules), IMPLEMENTATION_PLAN roadmap replaced, README/llms.txt/TECH_STACK/CLAUDE.md updated to match context package (2026-02-06)
 
 ## IN PROGRESS
-- **Phase 2 workflow re-alignment** — training materials, APP_FLOW, session briefs need updating (next session)
+- **Phase 2 workflow re-alignment** — APP_FLOW, session briefs, process files (NOT training materials). User is preparing scope — next session
 
 ## NEXT
-- Phase 2 workflow re-alignment (training, APP_FLOW, process files)
+- **START HERE:** User will define Phase 2 scope (training materials explicitly excluded)
+- Phase 2 workflow re-alignment
 - Phase 3 verification pass
 - Begin interrogation phase for prompt redesign
-- Phase 3: Redesign PRISM prompts (current priority per new roadmap)
 
 ## KNOWN ISSUES
 - **Prompts are weak** — PRISM Kernels need proper redesign (HIGH — this is the next real work)
