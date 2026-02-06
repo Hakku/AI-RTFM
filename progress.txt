@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-06 (session 6)
+> Last updated: 2026-02-06 (session 7)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -13,15 +13,23 @@
 - JTBD scoping session: reframed job to "write docs you're not embarrassed by, fast" (2026-02-05) — SUPERSEDED
 - Fresh-eyes codebase audit: full read of every file, produced honest assessment of what exists (2026-02-06)
 - **Phase 1 context re-alignment:** PRD rewritten (three-component framing, new roadmap, known issues, creator context, working rules), IMPLEMENTATION_PLAN roadmap replaced, README/llms.txt/TECH_STACK/CLAUDE.md updated to match context package (2026-02-06)
+- **Phase 2 workflow re-alignment (2026-02-06):**
+  - Created `.claude/rules/` with 5 modular rule files (workflow, communication, documentation-conventions, safety, completion-checklist) — extracted from monolithic CLAUDE.md and adapted from workflow-docs/system-prompt.md
+  - Slimmed CLAUDE.md from 168 lines to 87 lines — essentials only, detailed rules in .claude/rules/
+  - Created `.claude/skills/interrogation/SKILL.md` — adapted from workflow-docs/part-1-prompt.md, invokable via /interrogation
+  - Created `.claude/skills/doc-generation/SKILL.md` — adapted from workflow-docs/part-2-prompt.md, invokable via /doc-generation
+  - Updated SESSION-BRIEF-INTERROGATION.md — refreshed for current state, added app-phase questions, references skills
+  - Archived SESSION-BRIEF-JTBD.md to .backup/ (superseded)
+  - Updated APP_FLOW.md — marked application flows as pending interrogation
 
 ## IN PROGRESS
-- **Phase 2 workflow re-alignment** — APP_FLOW, session briefs, process files (NOT training materials). User is preparing scope — next session
+- **Interrogation phase** — next step: run /interrogation skill to answer open questions in SESSION-BRIEF-INTERROGATION.md
 
 ## NEXT
-- **START HERE:** User will define Phase 2 scope (training materials explicitly excluded)
-- Phase 2 workflow re-alignment
+- **START HERE:** Run `/interrogation` skill with SESSION-BRIEF-INTERROGATION.md
+- After interrogation: run `/doc-generation` to produce/update canonical docs
 - Phase 3 verification pass
-- Begin interrogation phase for prompt redesign
+- Begin prompt redesign (roadmap phase 1)
 
 ## KNOWN ISSUES
 - **Prompts are weak** — PRISM Kernels need proper redesign (HIGH — this is the next real work)
@@ -29,6 +37,7 @@
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
 
 ## DECISIONS
+- **Phase 2 workflow re-alignment (2026-02-06):** Adopted Claude Code v2 `.claude/rules/` for modular rules (Anthropic warns bloated CLAUDE.md gets ignored). Created reusable skills for interrogation and doc-generation. Rejected "no file overwrites" rule (git handles versioning). Rejected tasks/todo.md (Claude Code built-in TaskCreate is better). Adapted IMPLEMENTATION_PLAN immutability (immutable within phase, revisable between). Phase 4+ rules noted but not active.
 - **Context package received (2026-02-06):** Definitive project identity from creator. AI-RTFM = documentation toolkit (three components: folder structure + templates, AI prompts, process layer). Direction is tightening, not expanding
 - **New roadmap (2026-02-06):** 1) Redesign PRISM prompts, 2) Build prompt generator UI, 3) Model-agnostic/versioned prompts, 4) Self-improving prompt library → production app at Luhta. Old roadmap (validation scripts, CI/CD, RAG, MCP) is retired
 - **Prompts assessed as weak (2026-02-06):** User assessment overrides agent analysis. Prompt redesign is the highest priority
@@ -49,3 +58,5 @@
 ## OPEN QUESTIONS
 - How should prompt redesign be structured? (interrogation will answer)
 - What does "good output" look like for each kernel type? (interrogation will answer)
+- What does the Prompt Generator UI do specifically? (interrogation will answer)
+- What's the tech stack for the application? (interrogation will answer)

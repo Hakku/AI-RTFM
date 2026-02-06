@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## What
+
+AI-RTFM: PRISM KERNEL documentation toolkit for IT Operations teams, expanding to a production application (Prompt Generator UI) and company-wide adoption. Three components: folder structure + templates, AI prompts (PRISM kernels), process layer.
+
 ## Session Startup
 
 1. Read `progress.txt` — current state, what's done, what's next
@@ -11,23 +15,23 @@
 
 Before starting any new feature, scope change, or project phase:
 - Switch to planning mode
-- Interrogate the idea: assume nothing, ask until no assumptions remain
+- Interrogate the idea: **never assume, never infer, never fill gaps with reasonable defaults**
 - Questions to cover: who is this for, what's the core action, what data is involved, what happens on success/error, what dependencies exist, what's explicitly out of scope
 - Generate/update canonical docs from interrogation answers
 - Only then begin implementation
-
-## What
-
-AI-RTFM: PRISM KERNEL documentation toolkit for IT Operations teams, with goal to expand company-wide.
 
 ## Two-Layer Architecture
 
 | Layer | Purpose | Files |
 |-------|---------|-------|
-| **Project management** | Developing AI-RTFM itself | progress.txt, lessons.md, canonical docs (PRD, APP_FLOW, TECH_STACK, IMPLEMENTATION_PLAN) |
+| **Project management** | Developing AI-RTFM itself | progress.txt, lessons.md, canonical docs |
 | **Documentation toolkit** | The deliverable for teams | templates/, kernels/, standards/, training materials |
 
 Do not conflate these. Project management tracks development work. The documentation toolkit is the product.
+
+## Documentation Is Law
+
+If it's in the docs, follow it. If it's not in the docs, ask. Every undocumented decision gets escalated to the user before implementation.
 
 ## Canonical Docs
 
@@ -45,88 +49,14 @@ Do not conflate these. Project management tracks development work. The documenta
 | progress.txt | Session state, decisions, what's done/next (update every session) |
 | lessons.md | Patterns, anti-patterns, corrections, domain knowledge (update on learning) |
 
-## Self-Improvement
+## Detailed Rules
 
-- After every correction → update lessons.md
-- After every session → update progress.txt
-- After every pattern discovery → update lessons.md
-
-## Working Rules
-
-1. **Never edit kernels without updating ALL dependent files** (DEMO, ONBOARDING, WORKSHOP, QUICK-REFERENCE, README)
-2. **Check path references** — use relative paths from root, not `docs/`
-3. **Language** — system files in English, output examples can be Finnish
-4. **Tags** — use only tags from standards/tag-taxonomy.md
-5. **Examples must work** — test any kernel/template changes before committing
-
-## Documentation Conventions
-
-### Frontmatter (Required)
-
-Every document MUST have YAML frontmatter:
-
-```yaml
----
-type: technical_documentation | architecture_decision_record | incident_report | knowledge_base_article
-kernel: techdoc | adr | incident | kb | api | onboard | security | compliance | iac | dr | change | concept
-title: Descriptive Title
-owner: @username
-created: YYYY-MM-DD
-last_updated: YYYY-MM-DD
-status: draft | active | deprecated | archived
-tags: [system-tag, action-tag, optional-tags]  # minimum 3
----
-```
-
-Type-specific fields:
-- **ADRs:** `adr_number: NNNN`, `supersedes:`, `superseded_by:`
-- **Incidents:** `incident_id: INC-YYYY-NNNN`, `severity: P1|P2|P3|P4`, `duration:`
-- **KB articles:** `kb_id: KB-NNNN`, `category:`, `difficulty:`, `audience:`
-
-### File Naming
-
-| Type | Pattern | Example |
-|------|---------|---------|
-| Runbooks | `action-description.md` | `deploy-to-production.md` |
-| ADRs | `NNNN-brief-title.md` | `0001-use-postgresql.md` |
-| Incidents | `YYYY-MM-DD-brief-description.md` | `2026-04-15-database-outage.md` |
-| KB articles | `descriptive-name.md` | `vpn-connection-troubleshooting.md` |
-
-All lowercase with hyphens. No spaces, no underscores.
-
-### Section Order by Template
-
-**Runbooks:** Overview → Prerequisites → Procedure → Verification → Troubleshooting → Rollback → Notes → Related Docs → Maintenance
-
-**ADRs:** Status → Context → Decision Drivers → Options → Decision → Consequences → Implementation → Compliance → Related Decisions (immutable once accepted)
-
-**KB articles:** Problem → Quick Solution → Detailed Solutions → Root Cause → Prevention → Troubleshooting → Escalation → Related Articles (solution-first, explanation-second)
-
-**Incidents:** Executive Summary → Timeline (UTC) → Impact → Root Cause → Resolution → Action Items → Lessons Learned → Supporting Info → Sign-off
-
-### Style Rules (Quick Reference)
-
-- Active voice, present tense, sentence case headings
-- Commands must be copy-paste ready with expected output shown
-- Tags: lowercase with hyphens, from `standards/tag-taxonomy.md` only
-- Links: relative paths, descriptive text (never "click here")
-- Every document ends with "Related Documentation" section
-
-## Workflow Patterns
-
-### Plan Mode (Claude Code)
-- Start complex tasks in plan mode — front-load planning for one-shot implementation
-- When blocked or off-track, return to plan mode — don't push through
-- Use plan mode for verification design, not just building
-
-### Subagents (Claude Code)
-- Add "use subagents" to prompts for parallel computation on independent subtasks
-- Offload discrete tasks to subagents to preserve main context window
-
-### Understanding
-- Request ASCII diagrams for protocols/architectures when reviewing unfamiliar systems
-
-Note: Review triggers ("Grill me", "Prove it", "Elegant") and self-improvement rules are in global CLAUDE.md.
+See `.claude/rules/` for domain-specific rules:
+- `workflow.md` — plan mode, subagents, verification, self-improvement
+- `communication.md` — assumption format, change descriptions, push-back
+- `documentation-conventions.md` — frontmatter, naming, section order, style
+- `safety.md` — backups, path refs, kernel cascades, scope discipline
+- `completion-checklist.md` — phase-appropriate verification checklist
 
 ## File Quick Reference
 
@@ -147,18 +77,7 @@ Note: Review triggers ("Grill me", "Prove it", "Elegant") and self-improvement r
 | Search tool | tools/search.ps1 |
 | Stale finder | tools/stale-finder.ps1 |
 | Training flow | DEMO.md → ONBOARDING.md → WORKSHOP.md |
-| JTBD session brief | SESSION-BRIEF-JTBD.md |
 | Interrogation brief | SESSION-BRIEF-INTERROGATION.md (ACTIVE) |
-
-## Language
-
-- **System:** English (all framework files)
-- **Outputs:** Finnish (documentation teams create)
-- Finnish company, global operations
-
-## Safety
-
-Before deleting any file, copy to `.backup/filename.YYYYMMDD`
 
 ## Repository
 
