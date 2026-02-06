@@ -1,10 +1,9 @@
+---
+description: "Ruthlessly interrogate a product idea, feature, or scope change until zero assumptions remain. No building, no code, no documentation — only questions."
+disable-model-invocation: true
+---
+
 # Interrogation Skill
-
-Invoked via: `/interrogation`
-
-## Description
-
-Ruthlessly interrogate a product idea, feature, or scope change until zero assumptions remain. No building, no code, no documentation — only questions.
 
 ## Role
 

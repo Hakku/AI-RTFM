@@ -1,10 +1,9 @@
+---
+description: "Take interrogation answers and produce or update the canonical documentation suite. Every document is a constraint that prevents hallucination."
+disable-model-invocation: true
+---
+
 # Doc Generation Skill
-
-Invoked via: `/doc-generation`
-
-## Description
-
-Take interrogation answers and produce or update the canonical documentation suite. Every document is a constraint that prevents hallucination.
 
 ## Role
 
