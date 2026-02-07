@@ -22,12 +22,22 @@
 - Over-engineering: unicode decorators for aesthetics broke copy-paste. Aesthetics must not compromise function
 - Mixed languages evolving organically — drift is invisible to creator, obvious to fresh eyes
 
+## Anti-Patterns (Architecture Review, 2026-02-07)
+- **Tools hardcoded to subset of directories:** search.ps1 and stale-finder.ps1 only search runbooks/, incidents/, adr/, kb/. 8 of 12 doc types invisible to tooling. Never hardcode discovery paths when the system is designed to be extensible
+- **Kernel-template-example triangle disconnected:** Three related artifacts per doc type (template, kernel, example) live in different locations with no explicit binding. Kernel STRUCTURE doesn't match template sections. Only 4 of 12 types have examples. Co-location or a manifest file would keep them in sync
+- **Hashtag activation gives AI the name but not the content:** Custom Instructions tell AI "apply #techdoc kernel" but token limits mean the actual kernel isn't in the instructions. AI guesses instead of following rules. Full-kernel-paste works; hashtag is a lossy shortcut
+- **Standards that don't follow their own rules:** style-guide.md and review-process.md have `YYYY-MM-DD` placeholder dates — the exact field they require others to fill in. Eat your own dogfood
+- **Example docs with broken cross-references:** deploy-to-production.md links to 5 non-existent files. Example docs are the system's proof of quality — broken links undermine credibility
+- **Universal review cycles don't scale:** 30-day cycle for ALL active docs means 100 docs = 3+ reviews/day. Tier by criticality: critical ops (30d), standard (90d), stable (on-change-only)
+- **Monolithic kernel file blocks composition:** All 12 kernels in one file means can't version, test, or compose independently. Per-type directories with co-located examples would enable kernel composition for the Prompt Generator UI
+
 ## Anti-Patterns (Git/GitHub)
 - Testing branch protection by pushing to the branch you're protecting — test AFTER setup is complete, not during
 - Making throwaway commits to real files for testing — use isolated test files or API checks instead
 - GitHub rulesets on free plan require public repo. Private repos need GitHub Team (paid) or rely on discipline
 
 ## Corrections
+- 2026-02-07: Full architecture review before interrogation catches: tools blind to 8/12 dirs, 5 broken cross-refs in examples, placeholder dates in standards, llms.txt filename bug, fictional systems in tag taxonomy. Process fix: architecture review before any major phase transition
 - 2026-01-29: Fresh-eyes review catches accumulated drift (mixed languages, dead references, broken paths). Process fix: before release, have unfamiliar reviewer with "find obvious bugs" mandate
 - 2026-01-30: Session handoff discipline — context files must be updated BEFORE ending session. Stale context = confused next session
 - 2026-01-30: PowerShell variable `$incomplete` collided with `-Incomplete` switch parameter. Fix: renamed to `$incompleteDocs`. Avoid variable names matching parameter names in PowerShell

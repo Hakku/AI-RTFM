@@ -23,14 +23,50 @@ From Phase 1 context re-alignment:
 - **10-minute user** → Time target tightened from 30 to 10 minutes
 - **New roadmap:** 1) Redesign PRISM prompts, 2) Build prompt generator UI, 3) Model-agnostic/versioned prompts, 4) Self-improving prompt library
 
+## Architecture Review Findings (2026-02-07)
+
+Full architecture review completed before interrogation. Key findings that interrogation must address:
+
+### Kernel Architecture (CRITICAL — core product)
+- **Kernels are too thin:** ~15 lines of vague rules per kernel. No few-shot examples, no negative examples, no output format spec, no self-check criteria. This is likely why they feel "weak."
+- **All 12 kernels in one 482-line file:** Can't version independently, can't test individually, can't compose (e.g., techdoc + security). Kernel cascade (edit one → update 5 files) is manual and error-prone.
+- **Template-kernel-example triangle is disconnected:** Kernel STRUCTURE doesn't explicitly match template sections. Only 4 of 12 types have golden examples.
+- **Hashtag activation is fragile:** Custom Instructions can't hold all 12 kernel definitions. The AI is told "apply the corresponding kernel" without actually having the kernel content. Full-kernel-paste works better but is clunky.
+- **Kernel composition model needed for UI:** Instead of 12 monolithic kernels, consider composable layers: base + doc-type + audience-modifier + output-language. This scales without creating N x M combinations.
+
+### Tooling Gaps
+- **search.ps1 and stale-finder.ps1 only search 4 of 12 content directories** (runbooks, incidents, adr, kb). 8 doc types are invisible to tooling.
+- **No frontmatter validation tool.** review-process.md references `./scripts/validate-frontmatter.sh` which doesn't exist.
+- **No bootstrapping script** for new teams adopting the toolkit.
+
+### Content Issues
+- **Example docs have 5 broken cross-references** (deploy-to-production.md links to non-existent files)
+- **Standards have placeholder dates** (`YYYY-MM-DD` in style-guide.md and review-process.md)
+- **llms.txt filename bug** (links to `2024-10-15-database-outage.md`, document describes 2026 event)
+- **Tag taxonomy contains fictional systems** (order-service, payment-service — from examples, not real infrastructure)
+- **README has placeholder references** (support@company.com, [repo-link])
+
+### Scalability Concerns
+- **30-day universal review cycle unsustainable:** 100 docs = 3+ reviews/day. Needs tiered cycles (critical: 30d, standard: 90d, stable: on-change-only).
+- **2,059 lines of training material** for a system targeting "10-minute users." Learning overhead is 5-10x usage time.
+- **No quality feedback loop:** No mechanism to measure kernel output quality, track usage, capture user feedback, or A/B test variations.
+- **No offline resilience:** Without AI access, the system provides zero acceleration beyond raw templates.
+
+### Platform Risk
+- Works with ChatGPT/Claude Custom Instructions. Doesn't work with Copilot, Cursor, local models, or enterprise AI platforms.
+- Model behavior changes can silently break kernels. No detection mechanism.
+
 ## Questions Still Open
 
 ### Prompt Redesign (Roadmap Phase 1)
-- What specifically is wrong with the current prompts?
+- What specifically is wrong with the current prompts? (concrete examples of bad output needed)
 - What does "good output" look like for each kernel type?
 - What's the gap between current output and desired output?
 - Which kernels are used most? Which are never used?
 - What context does the user typically provide to the AI?
+- Should kernels include few-shot examples of good/bad output?
+- Should kernels be split into per-type directories?
+- Should kernels be composable (base + type + audience + language)?
 
 ### Prompt Generator UI (Roadmap Phase 2)
 - What does the Prompt Generator UI do specifically?
@@ -40,6 +76,7 @@ From Phase 1 context re-alignment:
 - How does the app relate to the existing toolkit?
 - Does the UI generate prompts, documents, or both?
 - What happens to the output? (copy to clipboard? export? save?)
+- Does the UI assemble kernels from composable pieces?
 
 ### Tech Stack (for the application)
 - What's the tech stack for the app?
@@ -52,6 +89,14 @@ From Phase 1 context re-alignment:
 - How is AI-RTFM currently deployed to teams?
 - What's the adoption status? Who uses it today?
 - What blocked wider adoption so far?
+
+### Architecture Decisions (from review — need user input)
+- Should tools be expanded to search all content directories?
+- Should golden examples be created for all 12 types?
+- Should review cycles be tiered by document criticality?
+- Should training materials be consolidated?
+- Should the tag taxonomy be stripped of fictional/example-specific systems?
+- What platforms must kernels work with? (ChatGPT, Claude, Gemini, Copilot, local models?)
 
 ## Process
 
