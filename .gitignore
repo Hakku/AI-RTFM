@@ -14,8 +14,11 @@
 
 # OS specific
 Thumbs.db
+nul
 
 # Claude Code local settings (allow rules and skills)
 .claude/*
 !.claude/rules/
 !.claude/skills/
+!.claude/hooks/
+!.claude/settings.json
