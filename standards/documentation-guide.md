@@ -1,8 +1,8 @@
 ---
 title: Documentation Standards Guide
 owner: @team-lead
-created: YYYY-MM-DD
-last_updated: YYYY-MM-DD
+created: 2026-02-04
+last_updated: 2026-02-07
 status: active
 ---
 
