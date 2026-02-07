@@ -4,12 +4,24 @@
 
 AI-RTFM: PRISM KERNEL documentation toolkit for IT Operations teams, expanding to a production application (Prompt Generator UI) and company-wide adoption. Three components: folder structure + templates, AI prompts (PRISM kernels), process layer.
 
+## Platform
+
+- Windows environment. Use PowerShell for path operations, not WSL bash.
+- Use portable path separators and the `py` launcher instead of `python3`.
+- Be careful with file extensions and Windows-specific path handling in JSON configs.
+
 ## Session Startup
 
 1. Read `progress.txt` — current state, what's done, what's next
 2. Read `lessons.md` — patterns, anti-patterns, domain knowledge
 3. **IF interrogation in progress:** Read `SESSION-BRIEF-INTERROGATION.md` first
 4. Otherwise: Check current step in `IMPLEMENTATION_PLAN.md`
+
+## Session Continuity
+
+- At session start, do NOT resume from previous session state unless explicitly asked. Start fresh and assess the current state of the repo.
+- Never enter interrogation mode or start a new workflow phase unless the user explicitly requests it.
+- When user says "stop" or "wait", immediately halt all actions.
 
 ## Interrogation Rule
 
@@ -32,6 +44,17 @@ Do not conflate these. Project management tracks development work. The documenta
 ## Documentation Is Law
 
 If it's in the docs, follow it. If it's not in the docs, ask. Every undocumented decision gets escalated to the user before implementation.
+
+## File Interdependencies
+
+- Before modifying any workflow or config file, first read ALL related/connected files to understand the system as a whole.
+- Treat numbered/sequenced docs (e.g., part-1, part-2) as an interconnected system — never edit one in isolation.
+
+## Verification & Sources
+
+- When asked to verify against best practices or source documents, always read the ACTUAL source files first before making claims.
+- Never fabricate or assume content — if you can't access a source, say so.
+- Confirm you're looking at the correct source before proceeding.
 
 ## Canonical Docs
 
@@ -85,3 +108,9 @@ See `.claude/rules/` for domain-specific rules:
 - **Remote:** https://github.com/Hakku/AI-RTFM
 - **Branch:** main
 - **Commit convention:** `feat|fix|refactor|docs|test|chore: description`
+
+## Git Workflow
+
+- NEVER push directly to main. Always create a feature branch, open a PR, and merge via PR.
+- Always check for branch protection rules before any git push operation.
+- After squash-merge PRs: `git reset --hard origin/main` (squash creates different hash).
