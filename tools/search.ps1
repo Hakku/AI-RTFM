@@ -56,7 +56,12 @@ if (-not $Path) {
 }
 
 # Directories to search
-$SearchDirs = @("runbooks", "incidents", "adr", "kb")
+$SearchDirs = @(
+    "runbooks", "incidents", "adr", "kb",
+    "templates", "standards", "kernels",
+    "api", "change", "onboard", "security",
+    "compliance", "iac", "dr", "concept"
+)
 
 function Get-DocTags {
     param([string]$FilePath)

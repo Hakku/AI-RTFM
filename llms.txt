@@ -8,7 +8,7 @@
 
 ## Incidents
 
-- [2026-04-15 Database Outage](incidents/2024-10-15-database-outage.md): P1 incident postmortem - PostgreSQL primary failure due to disk space exhaustion, 142 minutes downtime, root cause analysis and action items.
+- [2026-04-15 Database Outage](incidents/2026-04-15-database-outage.md): P1 incident postmortem - PostgreSQL primary failure due to disk space exhaustion, 142 minutes downtime, root cause analysis and action items.
 
 ## Architecture Decisions
 

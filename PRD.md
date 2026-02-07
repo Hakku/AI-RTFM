@@ -1,3 +1,12 @@
+---
+type: project_document
+title: AI-RTFM Product Requirements Document
+owner: @hakku
+created: 2026-02-06
+last_updated: 2026-02-06
+status: active
+---
+
 # AI-RTFM Product Requirements Document
 
 ## Problem Statement
