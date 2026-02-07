@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-06 (session 7)
+> Last updated: 2026-02-07 (session 8)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -25,6 +25,7 @@
 ## IN PROGRESS
 - **Interrogation phase** — next step: run /interrogation skill to answer open questions in SESSION-BRIEF-INTERROGATION.md
 - Created WORKFLOW.md — developer/contributor guide for working on AI-RTFM with Claude Code (2026-02-07)
+- **Architecture review complete (2026-02-07):** Full system review — every file read, cross-references checked, architecture assessed. Findings integrated into SESSION-BRIEF-INTERROGATION.md for interrogation phase. Key findings: kernels too thin (~15 lines, no examples), tools blind to 8/12 content dirs, template-kernel-example triangle disconnected, hashtag activation fragile, 5 broken cross-refs in examples, placeholder dates in standards
 
 ## NEXT
 - **START HERE:** Run `/interrogation` skill with SESSION-BRIEF-INTERROGATION.md
@@ -34,8 +35,14 @@
 
 ## KNOWN ISSUES
 - **Prompts are weak** — PRISM Kernels need proper redesign (HIGH — this is the next real work)
+- **Tools blind to 8/12 doc types** — search.ps1 and stale-finder.ps1 hardcode 4 directories (runbooks, incidents, adr, kb). Docs in api, change, onboard, security, compliance, iac, dr, concept directories are invisible (MED)
+- **Broken cross-references in examples** — deploy-to-production.md links to 5 non-existent files (MED)
+- **Placeholder dates in standards** — style-guide.md and review-process.md have `YYYY-MM-DD` instead of real dates (MED)
+- **llms.txt filename bug** — links to `2024-10-15-database-outage.md` but document describes 2026 event (LOW)
+- **Tag taxonomy has fictional systems** — order-service, payment-service etc. are from examples, not real infra (LOW)
 - No rendered docs site (raw markdown only) — LOW
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
+- review-process.md references non-existent `./scripts/validate-frontmatter.sh` — LOW
 
 ## DECISIONS
 - **Phase 2 workflow re-alignment (2026-02-06):** Adopted Claude Code v2 `.claude/rules/` for modular rules (Anthropic warns bloated CLAUDE.md gets ignored). Created reusable skills for interrogation and doc-generation. Rejected "no file overwrites" rule (git handles versioning). Rejected tasks/todo.md (Claude Code built-in TaskCreate is better). Adapted IMPLEMENTATION_PLAN immutability (immutable within phase, revisable between). Phase 4+ rules noted but not active.
@@ -61,3 +68,7 @@
 - What does "good output" look like for each kernel type? (interrogation will answer)
 - What does the Prompt Generator UI do specifically? (interrogation will answer)
 - What's the tech stack for the application? (interrogation will answer)
+- Should kernels be split into per-type directories with co-located examples? (interrogation)
+- Should kernels be composable (base + type + audience + language)? (interrogation)
+- Should review cycles be tiered by document criticality? (interrogation)
+- What platforms must kernels work with? (interrogation)
