@@ -20,7 +20,7 @@ AI-RTFM: PRISM KERNEL documentation toolkit for IT Operations teams, expanding t
 ## Session Continuity
 
 - At session start, do NOT resume from previous session state unless explicitly asked. Start fresh and assess the current state of the repo.
-- Never enter interrogation mode or start a new workflow phase unless the user explicitly requests it.
+- Never *spontaneously* enter interrogation mode or advance to a new workflow phase at session start. The Interrogation Rule still applies when the user requests a new feature or scope change.
 - When user says "stop" or "wait", immediately halt all actions.
 
 ## Interrogation Rule
