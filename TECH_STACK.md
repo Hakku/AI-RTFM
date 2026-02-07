@@ -1,3 +1,12 @@
+---
+type: project_document
+title: AI-RTFM Tech Stack
+owner: @hakku
+created: 2026-02-06
+last_updated: 2026-02-06
+status: active
+---
+
 # AI-RTFM Tech Stack
 
 > Locked dependencies. No additions without explicit approval.

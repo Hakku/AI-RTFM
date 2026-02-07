@@ -186,8 +186,8 @@ markdown-link-check **/*.md
 
 **Frontmatter validation:**
 ```bash
-# Custom script checks required fields
-./scripts/validate-frontmatter.sh
+# TODO: Planned — validate-frontmatter script not yet implemented
+# See KNOWN ISSUES in progress.txt
 ```
 
 ### Manual Review

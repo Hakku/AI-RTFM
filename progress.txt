@@ -27,6 +27,7 @@
 - Created WORKFLOW.md — developer/contributor guide for working on AI-RTFM with Claude Code (2026-02-07)
 - **Architecture review complete (2026-02-07):** Full system review — every file read, cross-references checked, architecture assessed. Findings integrated into SESSION-BRIEF-INTERROGATION.md for interrogation phase. Key findings: kernels too thin (~15 lines, no examples), tools blind to 8/12 content dirs, template-kernel-example triangle disconnected, hashtag activation fragile, 5 broken cross-refs in examples, placeholder dates in standards
 - **Best practices fixes (2026-02-07, PR #15):** Added MIT LICENSE, SECURITY.md, fixed placeholder dates in 3 standards files, removed 5 broken links from deploy-to-production.md, set GitHub repo description + topics
+- **Best practices fixes batch 2 (2026-02-07, PR #17):** Expanded tool search dirs (4→15 content dirs), renamed incident file (2024→2026 date), added frontmatter to 4 project docs, fixed phantom script reference in review-process.md, fixed llms.txt incident filename
 
 ## NEXT
 - **START HERE:** Run `/interrogation` skill with SESSION-BRIEF-INTERROGATION.md
@@ -36,14 +37,14 @@
 
 ## KNOWN ISSUES
 - **Prompts are weak** — PRISM Kernels need proper redesign (HIGH — this is the next real work)
-- **Tools blind to 8/12 doc types** — search.ps1 and stale-finder.ps1 hardcode 4 directories (runbooks, incidents, adr, kb). Docs in api, change, onboard, security, compliance, iac, dr, concept directories are invisible (MED)
+- ~~**Tools blind to 8/12 doc types** — search.ps1 and stale-finder.ps1 hardcode 4 directories (runbooks, incidents, adr, kb). Docs in api, change, onboard, security, compliance, iac, dr, concept directories are invisible (MED)~~ FIXED PR #17
 - ~~**Broken cross-references in examples** — deploy-to-production.md links to 5 non-existent files (MED)~~ FIXED PR #15
 - ~~**Placeholder dates in standards** — style-guide.md and review-process.md have `YYYY-MM-DD` instead of real dates (MED)~~ FIXED PR #15
-- **llms.txt filename bug** — links to `2024-10-15-database-outage.md` but document describes 2026 event (LOW)
+- ~~**llms.txt filename bug** — links to `2024-10-15-database-outage.md` but document describes 2026 event (LOW)~~ FIXED PR #17
 - **Tag taxonomy has fictional systems** — order-service, payment-service etc. are from examples, not real infra (LOW)
 - No rendered docs site (raw markdown only) — LOW
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
-- review-process.md references non-existent `./scripts/validate-frontmatter.sh` — LOW
+- ~~review-process.md references non-existent `./scripts/validate-frontmatter.sh`~~ FIXED PR #17 (replaced with TODO note)
 
 ## DECISIONS
 - **Phase 2 workflow re-alignment (2026-02-06):** Adopted Claude Code v2 `.claude/rules/` for modular rules (Anthropic warns bloated CLAUDE.md gets ignored). Created reusable skills for interrogation and doc-generation. Rejected "no file overwrites" rule (git handles versioning). Rejected tasks/todo.md (Claude Code built-in TaskCreate is better). Adapted IMPLEMENTATION_PLAN immutability (immutable within phase, revisable between). Phase 4+ rules noted but not active.

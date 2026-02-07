@@ -1,3 +1,12 @@
+---
+type: project_document
+title: AI-RTFM Implementation Plan
+owner: @hakku
+created: 2026-02-06
+last_updated: 2026-02-06
+status: active
+---
+
 # AI-RTFM Implementation Plan
 
 ## Phase 1: Hardening -- COMPLETE

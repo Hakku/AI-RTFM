@@ -35,14 +35,14 @@ Full architecture review completed before interrogation. Key findings that inter
 - **Kernel composition model needed for UI:** Instead of 12 monolithic kernels, consider composable layers: base + doc-type + audience-modifier + output-language. This scales without creating N x M combinations.
 
 ### Tooling Gaps
-- **search.ps1 and stale-finder.ps1 only search 4 of 12 content directories** (runbooks, incidents, adr, kb). 8 doc types are invisible to tooling.
-- **No frontmatter validation tool.** review-process.md references `./scripts/validate-frontmatter.sh` which doesn't exist.
+- ~~**search.ps1 and stale-finder.ps1 only search 4 of 12 content directories** (runbooks, incidents, adr, kb). 8 doc types are invisible to tooling.~~ FIXED PR #17
+- ~~**No frontmatter validation tool.** review-process.md references `./scripts/validate-frontmatter.sh` which doesn't exist.~~ FIXED PR #17 (phantom reference replaced with TODO)
 - **No bootstrapping script** for new teams adopting the toolkit.
 
 ### Content Issues
 - **Example docs have 5 broken cross-references** (deploy-to-production.md links to non-existent files)
 - **Standards have placeholder dates** (`YYYY-MM-DD` in style-guide.md and review-process.md)
-- **llms.txt filename bug** (links to `2024-10-15-database-outage.md`, document describes 2026 event)
+- ~~**llms.txt filename bug** (links to `2024-10-15-database-outage.md`, document describes 2026 event)~~ FIXED PR #17
 - **Tag taxonomy contains fictional systems** (order-service, payment-service — from examples, not real infrastructure)
 - **README has placeholder references** (support@company.com, [repo-link])
 

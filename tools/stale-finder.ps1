@@ -41,7 +41,12 @@ if (-not $Path) {
     $Path = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 }
 
-$SearchDirs = @("runbooks", "incidents", "adr", "kb")
+$SearchDirs = @(
+    "runbooks", "incidents", "adr", "kb",
+    "templates", "standards", "kernels",
+    "api", "change", "onboard", "security",
+    "compliance", "iac", "dr", "concept"
+)
 $Today = Get-Date
 $CutoffDate = $Today.AddDays(-$Days)
 

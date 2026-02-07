@@ -1,3 +1,12 @@
+---
+type: project_document
+title: AI-RTFM User Workflow Flows
+owner: @hakku
+created: 2026-02-06
+last_updated: 2026-02-06
+status: active
+---
+
 # AI-RTFM User Workflow Flows
 
 > **Status:** Toolkit flows below are current. Application flows (Prompt Generator UI) are **pending interrogation** — they will be defined during the interrogation phase via `/interrogation` and `/doc-generation` skills. Do NOT write app flows until interrogation is complete.
