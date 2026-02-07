@@ -1,5 +1,5 @@
 # AI-RTFM Progress
-> Last updated: 2026-02-07 (session 8)
+> Last updated: 2026-02-07 (session 9)
 
 ## COMPLETED
 - Phase 1 (Hardening): path fixes, English conversion, kernel simplification, dependent file updates (2026-01-29)
@@ -28,6 +28,7 @@
 - **Architecture review complete (2026-02-07):** Full system review — every file read, cross-references checked, architecture assessed. Findings integrated into SESSION-BRIEF-INTERROGATION.md for interrogation phase. Key findings: kernels too thin (~15 lines, no examples), tools blind to 8/12 content dirs, template-kernel-example triangle disconnected, hashtag activation fragile, 5 broken cross-refs in examples, placeholder dates in standards
 - **Best practices fixes (2026-02-07, PR #15):** Added MIT LICENSE, SECURITY.md, fixed placeholder dates in 3 standards files, removed 5 broken links from deploy-to-production.md, set GitHub repo description + topics
 - **Best practices fixes batch 2 (2026-02-07, PR #17):** Expanded tool search dirs (4→15 content dirs), renamed incident file (2024→2026 date), added frontmatter to 4 project docs, fixed phantom script reference in review-process.md, fixed llms.txt incident filename
+- **Claude Code hooks (2026-02-07, PR #18):** 4 hooks for programmatic convention enforcement — git-safety-guard (blocks destructive commands), commit-format-validator (conventional commits), frontmatter-validator (required fields, tag taxonomy, type-specific fields), kernel-cascade-reminder (dependent file updates). Portable `python` launcher. Added `nul` to .gitignore (Windows artifact).
 
 ## NEXT
 - **START HERE:** Run `/interrogation` skill with SESSION-BRIEF-INTERROGATION.md
@@ -44,7 +45,7 @@
 - **Tag taxonomy has fictional systems** — order-service, payment-service etc. are from examples, not real infra (LOW)
 - No rendered docs site (raw markdown only) — LOW
 - Templates lack co-located writing guides (Good Docs Project pattern) — LOW
-- ~~review-process.md references non-existent `./scripts/validate-frontmatter.sh`~~ FIXED PR #17 (replaced with TODO note)
+- ~~review-process.md references non-existent `./scripts/validate-frontmatter.sh`~~ FIXED PR #17 (replaced with TODO note); frontmatter validation now enforced via Claude Code hook (PR #18)
 
 ## DECISIONS
 - **Phase 2 workflow re-alignment (2026-02-06):** Adopted Claude Code v2 `.claude/rules/` for modular rules (Anthropic warns bloated CLAUDE.md gets ignored). Created reusable skills for interrogation and doc-generation. Rejected "no file overwrites" rule (git handles versioning). Rejected tasks/todo.md (Claude Code built-in TaskCreate is better). Adapted IMPLEMENTATION_PLAN immutability (immutable within phase, revisable between). Phase 4+ rules noted but not active.
